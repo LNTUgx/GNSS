@@ -18,7 +18,7 @@ clc
 % ------------------------------------------------------%
 
 % Model height: ellipsoidal height
-load("surf_height.mat"); %
+load("surface_height.mat");
 sf=re(:,1);
 
 % coefficient matrix
@@ -38,10 +38,10 @@ clevel_coef=[p_coef1;p_coef2;p_coef3;w_coef1;w_coef2;w_coef3];
 % lon  = -61.51; % unit: degree
 % h    = 141.0;  % unit: meter  
 % doy  = 20;       
-% hour = 5;    
+% hod = 0;    
 
 % prediction              
-[pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hour,sf,rlevel_coef,clevel_coef);
+[pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hod,sf,rlevel_coef,clevel_coef);
  
 
 

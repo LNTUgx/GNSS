@@ -1,4 +1,4 @@
-function [pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hour,sf,rlevel_coef,clevel_coef)
+function [pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hod,sf,rlevel_coef,clevel_coef)
 
     % coefficient matrix
     
