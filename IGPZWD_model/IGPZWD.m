@@ -1,4 +1,4 @@
-function [pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hod,sf,rlevel_coef,clevel_coef)
+function [pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hour,sf,rlevel_coef,clevel_coef)
 
     % coefficient matrix
     
@@ -118,7 +118,7 @@ function [pres,ZHD,ZWD,ZTD] = IGPZWD(lat,lon,h,doy,hod,sf,rlevel_coef,clevel_coe
     v3 = L0v3*exp(g3r1*(h-sf(nn(3))) + g3r2*(h^2-sf(nn(3))^2) + g3r3*(h^3-sf(nn(3))^3));
     v4 = L0v4*exp(g4r1*(h-sf(nn(4))) + g4r2*(h^2-sf(nn(4))^2) + g4r3*(h^3-sf(nn(4))^3));
 
-    wv1 = wL0v1*exp(wg1r1*(h-sf(nn(1))) + wg1r2*(h^2-sf(nn(1))^2) + wg1r3*(h^3-sf(nn(1))^3)); %三阶指数外推ZTD
+    wv1 = wL0v1*exp(wg1r1*(h-sf(nn(1))) + wg1r2*(h^2-sf(nn(1))^2) + wg1r3*(h^3-sf(nn(1))^3)); %脠媒陆脳脰赂脢媒脥芒脥脝ZTD
     wv2 = wL0v2*exp(wg2r1*(h-sf(nn(2))) + wg2r2*(h^2-sf(nn(2))^2) + wg2r3*(h^3-sf(nn(2))^3));
     wv3 = wL0v3*exp(wg3r1*(h-sf(nn(3))) + wg3r2*(h^2-sf(nn(3))^2) + wg3r3*(h^3-sf(nn(3))^3));
     wv4 = wL0v4*exp(wg4r1*(h-sf(nn(4))) + wg4r2*(h^2-sf(nn(4))^2) + wg4r3*(h^3-sf(nn(4))^3));
